@@ -1,8 +1,3 @@
-
----
-
-## `backend/app.py`
-```py
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List, Optional
@@ -52,7 +47,7 @@ def onboard(payload: OnboardPayload):
                 profiles = json.load(f)
         # replace if exists
         profiles = [p for p in profiles if p.get("student_id") != payload.student_id]
-        profiles.append(payload.dict())
+        profiles.append(payload.model_dump())
         with open(sample_profiles_path, "w", encoding="utf-8") as f:
             json.dump(profiles, f, indent=2, ensure_ascii=False)
     except Exception as e:
@@ -61,7 +56,7 @@ def onboard(payload: OnboardPayload):
 
 @app.post("/recommend")
 def recommend(req: RecommendRequest):
-    student = req.student_profile.dict()
+    student = req.student_profile.model_dump()
     top_k = req.top_k or 3
     recs = rec_service.recommend(student_profile=student, top_k=top_k)
     return {"student_id": student.get("student_id"), "recommendations": recs}
