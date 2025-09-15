@@ -101,4 +101,3 @@ class RecommendationService:
                 steps.append(f"Learn **{sk}** via a short course and build a small project demonstrating it.")
             steps.append("Combine those projects into a portfolio and publish a 1-page case study.")
         return steps
-
