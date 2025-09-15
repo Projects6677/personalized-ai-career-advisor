@@ -8,7 +8,6 @@ const rolesSkills = JSON.parse(fs.readFileSync(rolesSkillsPath, 'utf8'));
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
-      // Assuming the request body has the format from your frontend
       const { student_profile } = req.body;
       const studentSkills = new Set(student_profile.skills.map(s => s.toLowerCase()));
 
@@ -27,7 +26,6 @@ export default async function handler(req, res) {
         }
       }
 
-      // Sort recommendations by match score
       recommendations.sort((a, b) => b.match_score - a.match_score);
 
       res.status(200).json({
