@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "api/gemini.js": {
+      "runtime": "node"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    }
+  ]
+}
