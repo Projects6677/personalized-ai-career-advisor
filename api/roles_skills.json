@@ -1,0 +1,26 @@
+[
+  {
+    "id": "data_analyst",
+    "title": "Data Analyst",
+    "description": "Analyze datasets, create visualizations and reports to support business decisions.",
+    "skills": ["SQL", "Python", "Pandas", "Data Visualization", "Statistics"]
+  },
+  {
+    "id": "ui_ux_designer",
+    "title": "UI/UX Designer",
+    "description": "Design user interfaces and craft user experiences for web and mobile apps.",
+    "skills": ["User Research", "Wireframing", "Figma", "Interaction Design", "Prototyping"]
+  },
+  {
+    "id": "embedded_engineer",
+    "title": "Embedded Systems Engineer",
+    "description": "Develop firmware and hardware-software integration for embedded devices.",
+    "skills": ["C/C++", "Microcontrollers", "Embedded Linux", "Electronics", "RTOS"]
+  },
+  {
+    "id": "frontend_engineer",
+    "title": "Frontend Engineer",
+    "description": "Build interactive web applications with clean UI and accessible UX.",
+    "skills": ["HTML", "CSS", "JavaScript", "React", "Web Performance"]
+  }
+]
